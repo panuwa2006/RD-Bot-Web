@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../Loading/style.css">
+    <link rel="stylesheet" href="../codes/header.css">
+    <link rel="stylesheet" href="../codes/footer.css">
+    <link rel="stylesheet" href="../codes/design.css">
+    <link rel="stylesheet" href="../codes/userdetails.css">
+    <link rel="stylesheet" href="./settings.css">
+    <link rel="stylesheet" href="./scroll-bar.css">
+    <link rel="stylesheet" href="../codes/searchbox.css">
+    <link rel="stylesheet" href="../codes/navigation.css">
+    <link rel="icon" href="../System/icon.jpg" id="icon">
+    <style id="custom-style"></style>
+    <title id="title">SafeStory | EveloCode</title>
+</head>
+<body>
+    <div class="loading-container">
+        <div class="loading-text">Loading...</div>
+        <ul class="loading-field">
+            <div class="loading">
+                <li></li>
+            </div>
+            <div class="loading">
+                <li></li>
+            </div>
+            <div class="loading">
+                <li></li>
+            </div>
+        </ul>
+    </div>
+    <!--header-->
+    <div class="xcodejet-header">
+        <div class="header-items">
+            <img draggable="false" class="xcodejet-header-img" src="../Media/header.png">
+            <div class="header-text" style="display: none;">
+                <h2>safe story</h2><br>
+                <h3><a style="color: rgb(251, 255, 0)">From </a>EveloCode</h3>
+            </div>
+        </div>
+        <!--<div class="header-items">
+            <img draggable="false" class="xcodejet-header-img" src="./System/miniprolab-logo.png">
+            <div class="header-text">
+                <h2>safe story</h2><br>
+                <h3><a style="color: rgb(251, 255, 0)">From </a>MiniProLab</h3>
+            </div>
+        </div>-->
+        <div class="header-back-search">
+            <b class="time-server">Clock?</b>
+        </div>
+        <div class="header-back">
+            <a >
+                <img onclick="menuTabOpen()" draggable="false" id="profile-1" src="EveloCode">
+            </a>
+        </div>
+    </div>
+    <!--search box-->
+    <div class="search-box">
+        <div class="searchbar-box">
+            <div class="searchbar-out">
+                <div class="searchbar-icon">
+                    <img src="./System/search.png">
+                </div>
+                <div class="searchbar-input-out">
+                    <input type="text" placeholder="Type here username" oninput="inputProccess(this)">
+                </div>
+                <div class="searchbar-button-out">
+                    <!--<label for="search">Search</label>-->
+                    <i class="fa fa-search"></i>
+                </div>
+            </div>
+            <div class="resultbar-out">
+                <!--No matches-->
+            </div>
+        </div>
+    </div>
+    <div class="navigation-bar">
+        <a><button><i class="fa fa-bell"></i>Alerts</button></a>
+        <a id="home-button"><button><i class="fa fa-home"></i>Home</button></a>
+        <a><button><i class="fa fa-edit"></i>Customize_Bot</button></a>
+    </div>
+    <div id="gallery">
+        <!--profile box-->
+        <div class="settings-box-border">
+            <div class="settings-box">
+                <div class="settings">
+                    <img src="EveloCode" draggable="false" class="settings-dp">
+                    <div class="settings-name">
+                        <h2></h2> 
+                        <!--name and data--><h5><img src="./System/warn.png" style="width: 20px; margin-right: 5px;">Server connecting...<br>Do not close the app !</h5>
+                    </div>
+                </div>
+                <h3></h3>
+                <div class="userdetails">
+                    <div class="userdetails-list">
+                        <div class="userdetails-list-item">
+                            <img src="./System/fingerprint.png" alt="">
+                            <a class="userdetails-list-item-a">Account ID<br>BOT</a>
+                        </div>
+                    </div>
+                    <!--<div class="userdetails-list">
+                        <div class="userdetails-list-item">
+                            <img src="./System/loving.png" alt="">
+                            <a class="userdetails-list-item-a">Wait...<br>  Loving</a>
+                        </div>
+                    </div>-->
+                    <div class="userdetails-list">
+                        <div class="userdetails-list-item">
+                            <img src="./System/team.png" alt="">
+                            <a class="userdetails-list-item-a">3.8k<br>Users</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="settings-box-border">
+            <div class="settings-box">
+                <div class="settings">
+                    <div class="settings-list">
+                        <div class="setting-list-item">
+                            <img src="../System/user.png" alt="">
+                            <a>Account Data</a>
+                            <i class="fa fa-pencil"></i>
+                        </div>
+                        <br>
+                        <!--<b class="color-news">&#9658; Text can make multi colours &nbsp; &nbsp; {#colour(word)}
+                            <br>
+                            &#9658; Example : &nbsp;&nbsp; "{red(Red)} -- {yellow(Dragon)}"
+                            <br>
+                            &#9658; Example : &nbsp;&nbsp; "{#F00(Red)} -- {#FE0(Dragon)}"
+                            <br>
+                            &#9658; Output : &nbsp;&nbsp; &nbsp; &nbsp;"<b style="color: #f00;">Red</b>--<b style="color: #fe0;">Dragon</b>"
+                        </b>-->
+                        <b class="color-news">&#9658; Text can make multi colours &nbsp; &nbsp; {#colour(word)}
+                            <br>
+                            &#9658; Example : &nbsp;&nbsp; "{red(Evelo)} -- {yellow(Code)}"
+                            <br>
+                            &#9658; Example : &nbsp;&nbsp; "{#F00(Evelo)} -- {#FE0(Code)}"
+                            <br>
+                            &#9658; Output : &nbsp;&nbsp; &nbsp; &nbsp;"<b style="color: #f00;">Evelo</b>--<b style="color: #fe0;">Code</b>"
+                        </b>
+                        <div class="setting-list-item">
+                            <fieldset>
+                                <legend><h2>Profile Photo</h2></legend>
+                                <img src="../System/upload-image.png" alt="">
+                                <input style="font-size: 15px;" type="text" id="profile_photo_input" placeholder="Image Address">
+                            </fieldset>
+                        </div>
+                        <div class="setting-list-item">
+                            <fieldset>
+                                <legend><h2>First Name</h2></legend>
+                                <input type="text" id="first_name_input" placeholder="First Name" required>
+                            </fieldset>
+                        </div>
+                        <div class="setting-list-item">
+                            <fieldset>
+                                <legend><h2>Last Name</h2></legend>
+                                <input type="text" id="last_name_input" placeholder="Last Name" required>
+                            </fieldset>
+                        </div>
+                        <div class="setting-list-item">
+                            <fieldset>
+                                <legend><h2>Bio</h2></legend>
+                                <textarea type="text" id="bio_input" cols="3" placeholder="Add a bio"></textarea>
+                            </fieldset>
+                        </div>
+                        <div class="setting-list-item">
+                            <fieldset>
+                                <legend><h2>Birthday</h2></legend>
+                                <img src="../System/birthday-cake.png">
+                                <input type="date" id="birthday_input" required>
+                            </fieldset>
+                        </div>
+                        <div class="setting-list-item">
+                            <img src="../System/key.png">
+                            <a>Change Password</a>
+                            <i class="fa fa-pencil"></i>
+                        </div>
+                        <div class="setting-list-item">
+                            <fieldset>
+                                <legend><h2 id="current-password-lable">Current Password</h2></legend>
+                                <input type="password" id="current_password_input" placeholder="Current Password">
+                            </fieldset>
+                        </div>
+                        <div class="setting-list-item">
+                            <fieldset>
+                                <legend><h2 id="new-password-lable">New Password</h2></legend>
+                                <input type="password" id="new_password_input" placeholder="Create New Password">
+                            </fieldset>
+                        </div>
+                        <a></a><div class="setting-list-item">
+                            <img src="../System/sign-out.png" alt="">
+                            <a href="http://localhost/ArtwebAndroid/loginNew/index.html">Log Out</a>
+                        </div>
+                        <div class="setting-list-item-save">
+                            <a id="save-button" onclick="saveCustomStyles(this)">SAVE CHANGES</a>
+                        </div>
+                    </div>
+                </div>
+                <h3></h3>
+            </div>
+        </div>
+        <!--body-->
+        <div class="body-main">
+            
+</div>
+        <!--
+            <div class="box-border">
+                <div class="box">
+                    <img src="./Upload/1.png" alt="">
+                    <div class="box-footer">
+                        <div class="box-footer-img">
+                            <img draggable="false" src="./profile-photo/kumuthu.jpg">
+                        </div>
+                        <div class="box-footer-text">
+                            <h1>Welcome !</h1>
+                            <h3>MiniProLab team</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        -->
+    </div>
+    <a hidden>
+        <!--කාටවත් කියන්න එපා හලෝ මේක හංගපු එකක් හොඳේ...-->
+        <form id="hidden-settings">
+            <input type="text" id="data-cell-no" name="cellNo">
+            <input type="text" id="data-cell-data" name="cellData">
+            <input type="text" id="data-type" name="method" value="update">
+        </form>
+    </a>
+
+    <div class="footer-copyright">
+        <h3>Powered By: &nbsp;<img src="../System/evelocode-footer.png"></h3>
+    </div>
+    <script src="./append-data.js"></script>
+    <script src="../codes/clock.js"></script>
+    <script src="../Loading/loading.js"></script>
+</body>
+</html>

@@ -1,0 +1,182 @@
+.audio-box {
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  padding: 10px;
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  transition: .5s all ease;
+}
+.audio-box-active{
+  scale: .3;
+  opacity: 0;
+  transform: translateY(1500px);
+  transform: translateX(140%);
+  margin-top: -150px;
+}
+.audio-box-active.audio-box-deactive{
+  scale: 1;
+  opacity: 1;
+  transform: translateY(0px);
+  transform: translateX(0px);
+  margin-top: 30px;
+}
+.audio-container {
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 4px 8px -4px rgba(0, 0, 0, 0.3);
+    font-family: "Roboto", sans-serif;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.87);
+  }
+  .player-notify-bar {
+    width: 100%;
+    display: flex;
+    background-color: rgb(165, 165, 165);
+  }
+  .player-notify-bar i:nth-child(2) {
+    padding: 9px;
+    color: rgb(243, 243, 243);
+  }
+  .player-notify-bar i:hover {
+    padding: 9px;
+    color: rgb(0, 0, 0);
+  }
+  .player-notify-bar i {
+    padding: 9px;
+    color: rgb(255, 0, 0);
+  }
+  .audio-playing-notification {
+    display: none;
+    padding: 10px;
+  }
+  .audio-container .audio-waw {
+    background: #e6e6e6;
+    width: 100%;
+    height: 130px;
+  }
+  .audio-load-pre {
+    width: 100%;
+    height: 130px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgb(182, 181, 181);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+}
+.audio-load-pre b {
+    text-overflow: hidden;
+    font-size: 30px;
+    padding: 20px;
+}
+.audio-load-pre a {
+    text-overflow: hidden;
+    font-size: 10px;
+}
+  
+  .audio-container .track-name {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    color: #fff;
+    text-shadow: 00 1px 10px black;
+    font-family: Arial, Helvetica, sans-serif;
+    background: rgba(0, 0, 0, 0);
+    padding: 3px 5px;
+    border-radius: 10px;
+    font-size: 13px;
+  }
+  .audio-discription {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-image: linear-gradient(rgb(231, 231, 231), rgba(255, 255, 255, 0.774));
+    padding-top: 30px;
+  }
+  .audio-discription img {
+    width: 60px;
+    padding: 0px;
+    animation: rotating 5s infinite linear;
+  }
+  @keyframes rotating {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(359deg);
+    }
+    
+  }
+  .audio-discription b {
+    padding: 15px;
+    border-radius: 5px;
+    border: 2px solid rgb(201, 201, 201);
+    border-left: 0px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    padding-left: 10px;
+    margin-left: 5px;
+  }
+
+  .audio-container .btn {
+    padding: 16px;
+    width: 24px;
+    margin-right: 8px;
+    cursor: pointer;
+    display: inline-block;
+  }
+  
+  .audio-container .volume-slider {
+    margin-left: 20px;
+    width: 90px;
+  }
+  
+  .audio-container .player-buttons {
+    color: rgb(167, 167, 167);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: -10px;
+  }
+  .audio-container .player-buttons span {
+    width: 45px;
+  }
+  .audio-container .player-buttons span i {
+    color: #a5a5a5;
+    padding: 15px;
+    box-shadow: 00 5px 10px rgb(209, 209, 209);
+    background-color: white;
+    border-radius: 25px;
+  }
+  .audio-container .player-buttons .play-btn .fa-pause {
+    display: none;
+  }
+  
+  .audio-container .player-buttons .play-btn.playing .fa-pause {
+    display: inline-block;
+  }
+  
+  .audio-container .player-buttons .play-btn.play-btn.playing .fa-play {
+    display: none;
+  }
+  
+  .audio-container .player-buttons .mute-btn .fa-volume-mute {
+    display: none;
+  }
+  
+  .audio-container .player-buttons .mute-btn.muted .fa-volume-mute {
+    display: inline-block;
+  }
+  
+  .audio-container .player-buttons .mute-btn.muted .fa-volume-up {
+    display: none;
+  }
+

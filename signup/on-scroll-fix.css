@@ -1,0 +1,10 @@
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.904);
+}
+
+.sticky + .content {
+  padding-top: 102px;
+}

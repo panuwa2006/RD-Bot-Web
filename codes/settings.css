@@ -1,0 +1,159 @@
+/*popins*/@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+.settings-box-border {
+    margin-top: 10px;
+    width: 100%;
+    padding: 5px;
+    transition: .6s;
+    display: none;
+    flex-direction: row;
+}
+@media only screen and (max-width: 680px) {
+    .settings-box-border:nth-child(1) {
+        margin-top: 60px;
+    }
+    .userdetails-box-border {
+        margin-top: 50px;
+    }
+}
+@media only screen and (min-width: 680px) {
+    .navigation-bar {
+        margin-left: 110px;
+        position: fixed;
+        z-index: 2;
+        margin-top: -65px;
+        height: 75px;
+        width: 60%;
+        background-color: transparent;
+    }
+    .navigation-bar a {
+        justify-content: left;
+        padding: 15px;
+        border-left: 0px solid grey;
+        width: 20%;
+    }
+    .navigation-bar a:nth-child(2) {
+        border-left: 0px solid grey;
+        border-right: 0px solid grey;
+    }
+    .navigation-bar a:nth-child(3) {
+        justify-content: left;
+        width: 30%;
+    }
+}
+.settings-box {
+    width: 100%;
+    padding: 10px;
+    background-color: #323232;
+    box-shadow: 00 2px 10px rgba(92, 92, 92, 0);
+    display: flex;
+    flex-direction: row;
+}
+.settings {
+    width: 100%;
+    display: flex;
+}
+.userdetails {
+    width: 70%;
+    display: flex;
+}
+@media only screen and (max-width: 680px) {
+    .settings-box {
+        flex-direction: column;
+    }
+    .settings {
+        width: 100%;
+        display: flex;
+    }
+    .userdetails {
+        width: 100%;
+        display: flex;
+    }
+}
+.settings-dp {
+    height: 120px;
+    width: 120px;
+    border-radius: 5px;
+}
+.settings-name {
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    justify-content: center;
+}
+.settings-name h2 {
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    color: rgb(248, 248, 248);
+    display: flex;
+    align-items: center;
+}
+.settings-name h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: rgb(187, 187, 187);
+}
+.settings-name h4 {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight:normal;
+    font-size: 13px;
+    color: rgb(172, 172, 172);
+}
+.settings-name h5 {
+    font-family: "Asap", sans-serif;
+    background-color: red;
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    border-radius: 4px;
+    font-size: 13px;
+    color: rgb(255, 255, 255);
+}
+@media (min-width: 400px){
+    .settings-name h2 {
+        font-size: 20px;
+    }
+}
+@media (min-width: 700px){
+    .settings-name h2 {
+        font-size: 25px;
+    }
+}
+
+
+.settings-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+}
+.setting-list-item {
+    width: 97%;
+    padding: 6px;
+    border-bottom: 1px solid rgb(88, 88, 88);
+    display: flex;
+    align-items: center;
+}
+.setting-list-item a {
+    font-family: "Asap", sans-serif;
+    text-decoration: none;
+    padding: 5px;
+    margin-left: 10px;
+    font-size: 20px;
+    color: rgb(206, 206, 206);
+}
+.setting-list-item a:hover {
+    font-weight: bold;
+}
+.setting-list-item img {
+    width: 20px;
+    filter: invert(100%);
+}
