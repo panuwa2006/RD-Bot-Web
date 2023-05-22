@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./Loading/style.css">
+    <link rel="stylesheet" href="./codes/header.css">
+    <link rel="stylesheet" href="./codes/footer.css">
+    <link rel="stylesheet" href="./codes/design.css">
+    <link rel="stylesheet" href="./codes/userdetails.css">
+    <link rel="stylesheet" href="./codes/settings.css">
+    <link rel="stylesheet" href="./codes/scroll-bar.css">
+    <link rel="stylesheet" href="./codes/annoucement-box.css">
+    <link rel="stylesheet" href="./codes/searchbox.css">
+    <link rel="stylesheet" href="./codes/animation.css">
+    <link rel="stylesheet" href="./codes/navigation.css">
+    <link rel="stylesheet" href="./codes/notification.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+    <link rel="stylesheet" href="./player/audio-player.css" />
+    <link rel="icon" href="./System/icon.jpg" id="icon">
+    <style id="custom-style"></style>
+    <title id="title">Red-Dragon | EveloCode</title>
+</head>
+<body>
+    <div class="loading-container">
+        <div class="loading-text">Loading...</div>
+        <ul class="loading-field">
+            <div class="loading">
+                <li></li>
+            </div>
+            <div class="loading">
+                <li></li>
+            </div>
+            <div class="loading">
+                <li></li>
+            </div>
+        </ul>
+    </div>
+    <!--Notification-->
+    <div class="notification">
+        <div class="notification-contain">
+            <div class="notification-img-box">
+                <img src="./System/notification.png">
+            </div>
+            <div class="notification-message-box">
+                <b>Study error!<br>Unfortunatly system rejected books.</b>
+            </div>
+            <div class="notification-close-box">
+                <img src="./System/close.png">
+            </div>
+        </div>
+        <div class="notification-contain">
+            <div class="notification-img-box">
+                <img src="./System/notification.png">
+            </div>
+            <div class="notification-message-box">
+                <b>Syllabus have many unnecessary thing or malwares. It can be damage to your creative mind.<br>Please restart your brain and try again.</b>
+            </div>
+            <div class="notification-close-box">
+                <img src="./System/close.png">
+            </div>
+        </div>
+    </div>
+    <!--header-->
+    <div class="xcodejet-header">
+        <div class="header-items">
+            <img draggable="false" class="xcodejet-header-img" src="./Media/header.png">
+            <div class="header-text" style="display: none;">
+                <h2>safe story</h2><br>
+                <h3><a style="color: rgb(251, 255, 0)">From </a>EveloCode</h3>
+            </div>
+        </div>
+        <!--<div class="header-items">
+            <img draggable="false" class="xcodejet-header-img" src="./System/miniprolab-logo.png">
+            <div class="header-text">
+                <h2>safe story</h2><br>
+                <h3><a style="color: rgb(251, 255, 0)">From </a>MiniProLab</h3>
+            </div>
+        </div>-->
+        <div class="header-back-search">
+            <b class="time-server">WTF?</b>
+            <a>
+                <i onclick="searchBarHide()" class="fa fa-search"></i>
+            </a>
+            <a>
+                <i onclick="audioMaximize()" class="fa fa-play audio-playing-notification"></i>
+            </a>
+        </div>
+        <div class="header-back">
+            <a >
+                <img onclick="menuTabOpen()" draggable="false" id="profile-1" src="miniprolab">
+            </a>
+        </div>
+    </div>
+    <!--search box-->
+    <div class="search-box">
+        <div class="searchbar-box">
+            <div class="searchbar-out">
+                <div class="searchbar-icon">
+                    <img src="./System/search.png">
+                </div>
+                <div class="searchbar-input-out">
+                    <input type="text" placeholder="Type here username" oninput="inputProccess(this)">
+                </div>
+                <div class="searchbar-button-out">
+                    <!--<label for="search">Search</label>-->
+                    <i class="fa fa-search"></i>
+                </div>
+            </div>
+            <div class="resultbar-out">
+                <!--No matches-->
+            </div>
+        </div>
+    </div>
+    <div class="navigation-bar">
+        <a href=""><button><i class="fa fa-bell"></i>Alerts</button></a>
+        <a href=""><button><i class="fa fa-home"></i>Home</button></a>
+        <a href=""><button><i class="fa fa-edit"></i>Customize_Bot</button></a>
+    </div>
+    <!--audio player-->
+    <div class="audio-box audio-box-active">
+        <div class="audio-container">
+            <div class="player-notify-bar">
+                <div style="width: 97%;"></div>
+                <i class="fas fa-window-minimize" onclick="audioMinimize()"></i>
+                <i class="fas fa-close" onclick="audioClose()"></i>
+            </div>
+            <div class="track-name">Audio</div>
+    
+            <div class="audio-waw" id="audio_00002">
+            <div onclick="loadAudio('Raththaran Pem Purane Amisha Minol SLMIX.mp3','audio_00002')" class="audio-load-pre">
+                <b>Tap here to load</b>
+            </div>
+            </div>
+            <div class="audio-discription">
+                <img src="./player/music-playing-image.png">
+                <b id="music-name">The music title (U.V.D.Kumuthu Prabhasha)</b>
+            </div>
+            <div class="player-buttons">
+            <span class="play-btn btn" onclick="playSong(this)">
+                <i class="fas fa-play"></i>
+                <i class="fas fa-pause"></i>
+            </span>
+            <span class="stop-btn btn">
+                <i class="fas fa-stop"></i>
+            </span>
+            <span class="mute-btn btn">
+                <i class="fas fa-volume-up"></i>
+                <i class="fas fa-volume-mute"></i>
+            </span>
+            <input type="range" min="0" max="1" step="0.1" value="1" class="volume-slider"/>
+            </div>
+        </div>
+    </div>
+    <div id="gallery">
+        <!--profile box-->
+        <div class="settings-box-border">
+            <div class="settings-box">
+                <div class="settings">
+                    <img src="miniprolab" draggable="false" class="settings-dp">
+                    <div class="settings-name">
+                        <h2></h2> 
+                        <!--name and data--><h5><img src="./System/warn.png" style="width: 20px; margin-right: 5px;">Server connecting...<br>Do not close the app !</h5>
+                    </div>
+                </div>
+                <h3></h3>
+                <div class="userdetails">
+                    <div class="userdetails-list">
+                        <div class="userdetails-list-item">
+                            <img src="./System/fingerprint.png" alt="">
+                            <a class="userdetails-list-item-a">Account ID<br>BOT</a>
+                        </div>
+                    </div>
+                    <!--<div class="userdetails-list">
+                        <div class="userdetails-list-item">
+                            <img src="./System/loving.png" alt="">
+                            <a class="userdetails-list-item-a">Wait...<br>  Loving</a>
+                        </div>
+                    </div>-->
+                    <div class="userdetails-list">
+                        <div class="userdetails-list-item">
+                            <img src="./System/team.png" alt="">
+                            <a class="userdetails-list-item-a">3.8k<br>Users</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="settings-box-border">
+            <div class="settings-box">
+                <div class="settings">
+                    <div class="settings-list">
+                        <div class="setting-list-item">
+                            <img src="./System/setting.png" alt="">
+                            <a id="settings-button">Bot Settings</a>
+                        </div>
+                        <div class="setting-list-item">
+                            <img src="./System/user.png" alt="">
+                            <a id="account-button">Account</a>
+                        </div>
+                        <div class="setting-list-item">
+                            <img src="./System/caution.png" alt="">
+                            <a>Support</a>
+                        </div>
+                        <a></a><div class="setting-list-item">
+                            <img src="./System/sign-out.png" alt="">
+                            <a href="http://localhost/ArtwebAndroid/loginNew/index.html">Log Out</a>
+                        </div>
+                    </div>
+                </div>
+                <h3></h3>
+            </div>
+        </div>
+        <!--Other's profile-->
+        <div class="userdetails-box-border">
+            <div class="userdetails-box">
+                <div class="userdetails">
+                    <img src="./System/logo (2).jpg"  draggable="false" class="userdetails-dp">
+                    <div class="userdetails-name">
+                        <!--name and data--><h5><img src="./System/warn.png" style="width: 20px; margin-right: 5px;">Search an account first</h5>
+                    </div>
+                </div>
+                <h3></h3>
+            </div>
+        </div>
+        <br>
+        <div class="screen-main">
+            <!--body-->
+            <div class="body-main">
+                <!--instructions-->
+                <div class="home-instruct-box">
+                    <br><br>
+                    <div class="box-border" style="margin-top: -30px;">
+                        <div class="box">
+                            <img id="annoucement-img" src="./System/announcement-load.png" alt="">
+                            <div class="annoucement-box">
+                                <h1 id="annoucement-text"></h1>
+                            </div>
+                            <div class="box-footer">
+                                <div class="box-footer-img">
+                                    <img draggable="false" src="./System/logo (2).jpg">
+                                </div>
+                                <div class="box-footer-text">
+                                    <h1>Annoucement</h1>
+                                    <h3>From EveloCode official</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="home-instruct-box">
+                    <br><br>
+                    <div class="box-border" style="margin-top: -30px;">
+                        <div class="box">
+                            <img id="annoucement-img" src="./System/announcement-load.png" alt="">
+                            <div class="annoucement-box">
+                                <h1 id="annoucement-text"></h1>
+                            </div>
+                            <div class="box-footer">
+                                <div class="box-footer-img">
+                                    <img draggable="false" src="./System/logo (2).jpg">
+                                </div>
+                                <div class="box-footer-text">
+                                    <h1>Annoucement</h1>
+                                    <h3>From EveloCode official</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <!--
+                <div class="box-border">
+                    <div class="box">
+                        <img src="./Upload/1.png" alt="">
+                        <div class="box-footer">
+                            <div class="box-footer-img">
+                                <img draggable="false" src="./profile-photo/kumuthu.jpg">
+                            </div>
+                            <div class="box-footer-text">
+                                <h1>Welcome !</h1>
+                                <h3>MiniProLab team</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            -->
+        </div>
+    </div>
+
+    <div class="footer-copyright">
+        <h3>Powered By: &nbsp;<img src="./System/evelocode-footer.png"></h3>
+    </div>
+    <script src="./codes/boxes.js"></script>
+    <script src="./codes/append-data.js"></script>
+    <!--<script src="./codes/openuser.js"></script>-->
+    <script src="./codes/animation.js"></script>
+    <script src="https://unpkg.com/wavesurfer.js"></script>
+    <script src="./player/audio-player.js"></script>
+    <script src="./Loading/loading.js"></script>
+    <script src="./codes/clock.js"></script>
+</body>
+</html>
